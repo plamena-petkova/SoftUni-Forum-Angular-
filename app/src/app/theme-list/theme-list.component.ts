@@ -11,11 +11,11 @@ export class ThemeListComponent implements OnInit {
 
   themeList: ITheme[] | undefined;
 
-  constructor(private themeSevice: ThemeService) { }
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
 
-    this.themeSevice.loadThemeList().subscribe(themeList => {
+    this.themeService.loadThemeList().subscribe(themeList => {
       this.themeList = themeList;
 
     })
