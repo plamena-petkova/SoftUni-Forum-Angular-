@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IPost } from '../interface';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-aside',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aside.component.scss']
 })
 export class AsideComponent implements OnInit {
+  
+  postList!: IPost[];
 
-  constructor() { }
+  constructor(private postService:PostService) { }
 
   ngOnInit(): void {
+
+    this.postService.loadPostList().subscribe(postList =>{
+      this.postList = postList;
+    })
   }
 
 }

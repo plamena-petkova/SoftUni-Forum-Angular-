@@ -10,6 +10,7 @@ import { ThemeListComponent } from './theme-list/theme-list.component';
 import { AsideComponent } from './aside/aside.component';
 import { ThemeService } from './theme.service';
 import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
+import { PostService } from './post.service';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { ThemeListItemComponent } from './theme-list-item/theme-list-item.compon
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ThemeService],
+  providers: [ThemeService, PostService],
   bootstrap: [
     AppComponent,
     HeaderComponent,
