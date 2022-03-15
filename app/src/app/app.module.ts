@@ -10,7 +10,9 @@ import { ThemeListComponent } from './theme-list/theme-list.component';
 import { AsideComponent } from './aside/aside.component';
 import { ThemeService } from './theme.service';
 import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
-import { PostService } from './post.service';
+import { PostService } from "./PostService";
+import { HomeComponent } from './home/home.component';
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
@@ -20,12 +22,14 @@ import { PostService } from './post.service';
     FooterComponent,
     ThemeListComponent,
     AsideComponent,
-    ThemeListItemComponent
+    ThemeListItemComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    UserModule
   ],
   providers: [ThemeService, PostService],
   bootstrap: [

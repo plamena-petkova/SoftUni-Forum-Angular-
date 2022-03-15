@@ -1,15 +1,15 @@
 <header>
     <div class="mini-navbar-wrap"  >
         <div class="logo-wrap">
-            <p class="logo"><span class="logo">SoftUni Forum</span></p>
+            <p class="logo"><span class="logo" routerLink="/">SoftUni Forum</span></p>
         </div>
         <div class="mini-navbar" *ngIf="!isLogged">
             <ul>
                 <li>
-                    <a (click)="loginHandler()" href="#">Login</a>
+                    <a (click)="loginHandler()" routerLink="/login">Login</a>
                 </li>
                 <li>
-                    <a href="#">Register</a>
+                    <a routerLink="/register">Register</a>
                 </li>
             </ul>
         </div>
