@@ -13,6 +13,7 @@ import { ThemeListItemComponent } from './theme-list-item/theme-list-item.compon
 import { PostService } from "./PostService";
 import { HomeComponent } from './home/home.component';
 import { UserModule } from './user/user.module';
+import { UserRoutingModule } from './user/user-routing.module';
 
 
 @NgModule({
@@ -29,12 +30,11 @@ import { UserModule } from './user/user.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    UserModule
+    UserModule,
+    UserRoutingModule
   ],
   providers: [ThemeService, PostService],
   bootstrap: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent]
+    AppComponent, HeaderComponent, FooterComponent]
 })
 export class AppModule { }
