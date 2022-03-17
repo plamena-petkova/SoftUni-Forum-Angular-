@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { LoginGuard } from './login.guard';
 import { ThemeListComponent } from './theme-list/theme-list.component';
 
 
@@ -12,6 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'themes',
+    canActivate: [LoginGuard],
     component: ThemeListComponent
   }
 ];
