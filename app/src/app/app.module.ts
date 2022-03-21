@@ -4,36 +4,31 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { ThemeListComponent } from './theme-list/theme-list.component';
-import { AsideComponent } from './aside/aside.component';
-import { ThemeService } from './theme.service';
-import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
-import { PostService } from "./PostService";
-import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { CoreModule } from './core/core.module';
+import { FeatureModule } from './feature/feature.module';
 import { UserModule } from './user/user.module';
-import { UserRoutingModule } from './user/user-routing.module';
+import { PostService } from './user/post.service';
+import { UserService } from './user/user.service';
+import { ThemeService } from './user/theme.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    ThemeListComponent,
-    AsideComponent,
-    ThemeListItemComponent,
-    HomeComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    UserModule,
-    UserRoutingModule
+    CoreModule,
+    FeatureModule,
+    UserModule
   ],
-  providers: [ThemeService, PostService],
+  providers: [PostService, UserService, ThemeService],
   bootstrap: [
     AppComponent, HeaderComponent, FooterComponent]
 })
