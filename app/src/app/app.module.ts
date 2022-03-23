@@ -9,24 +9,29 @@ import { FooterComponent } from './core/footer/footer.component';
 import { CoreModule } from './core/core.module';
 import { FeatureModule } from './feature/feature.module';
 import { UserModule } from './user/user.module';
-import { PostService } from './user/post.service';
+import { PostService } from './feature/post.service';
 import { UserService } from './user/user.service';
-import { ThemeService } from './user/theme.service';
+import { ThemeService } from './feature/theme.service';
+import { FeatureRouterModule } from './feature/feature-router.module';
+import { ThemeDetailsComponent } from './feature/theme-details/theme-details.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    ThemeDetailsComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CoreModule,
+    CoreModule.forRoot(),
     FeatureModule,
-    UserModule
+    UserModule,
+    FeatureRouterModule
+    
   ],
   providers: [PostService, UserService, ThemeService],
   bootstrap: [

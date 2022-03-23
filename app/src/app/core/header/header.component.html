@@ -13,21 +13,28 @@
                 </li>
             </ul>
         </div>
+        <div class="mini-navbar" *ngIf="isLogged">
+            <ul>
+                <li>
+                    <a href="#">John's profile</a>
+                </li>
+                <li>
+                    <a href="#" (click)="logoutHandler()">Logout</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="mini-navbar-wrap" *ngIf="isLogged">
-    <li>Hello Username</li>
-    <a (click)="logoutHandler()">Logout</a>
-    </div>
+    
     <nav>
         <ul>
             <li>
-                <a href="/">Home</a>
+                <a routerLink="/">Home</a>
             </li>
             <li>
                 <a routerLink="/themes">Themes</a>
             </li>
             <li>
-                <a routerLink="/add-theme">New Theme</a>
+                <a routerLink="/theme/new">New Theme</a>
             </li>
         </ul>
     </nav>

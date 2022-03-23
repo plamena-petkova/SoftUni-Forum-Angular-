@@ -1,5 +1,20 @@
+<main>
 <div *ngFor="let theme of themeList">
 <app-theme-list-item [theme]="theme">
 </app-theme-list-item>
 </div>
+</main>
+<app-aside></app-aside>
 
+
+
+<!-- <main>
+    <div *ngIf="!isLoggedIn" class="container">
+        <app-welcome></app-welcome>
+    </div>
+    <app-theme-list></app-theme-list>
+</main>
+
+<aside>
+    <app-aside></app-aside>
+</aside> -->

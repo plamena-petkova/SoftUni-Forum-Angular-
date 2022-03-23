@@ -1,12 +1,9 @@
+import { IBase } from "./base";
 import { IUser } from "./user";
 
-export interface ITheme {
-subscribers: string[];
-posts: string[];
-_id: string;
-themeName: string;
-userId: IUser
-created_at: string;
-updatedAt:string;
-__v: number;
-}
+export interface ITheme<T = string> extends IBase {
+    subscribers: string[];
+    posts: T[];
+    themeName: string;
+    userId: IUser;
+  }
