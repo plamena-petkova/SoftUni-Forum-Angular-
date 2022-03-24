@@ -1,8 +1,6 @@
 
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './feature/home/home.component';
-import { ThemeListItemComponent } from './feature/theme-list-item/theme-list-item.component';
-import { ThemeListComponent } from './feature/theme-list/theme-list.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 
@@ -27,10 +25,7 @@ const routes: Routes = [
     path: 'register',
     component: RegisterComponent
   },
-  {
-    path: 'themes',
-    component: ThemeListComponent
-  }
+
 
 ];
 

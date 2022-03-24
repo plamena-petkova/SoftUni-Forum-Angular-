@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path: 'themes/:themeId',
     component: ThemeDetailsComponent
+  },
+  {
+    path: 'theme/new',
+    component: ThemeListComponent
   }
 
 ];
