@@ -6,6 +6,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { PostService } from '../feature/post.service';
 import { UserService } from './user.service';
 import { ThemeService } from '../feature/theme.service';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,10 +15,12 @@ import { ThemeService } from '../feature/theme.service';
   declarations: [
     ProfileComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+  
   ],
   imports: [
     CommonModule,
+    FormsModule
 
   ],
 

@@ -14,6 +14,7 @@ import { UserService } from './user/user.service';
 import { ThemeService } from './feature/theme.service';
 import { FeatureRouterModule } from './feature/feature-router.module';
 import { ThemeDetailsComponent } from './feature/theme-details/theme-details.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -30,7 +31,8 @@ import { ThemeDetailsComponent } from './feature/theme-details/theme-details.com
     CoreModule.forRoot(),
     FeatureModule,
     UserModule,
-    FeatureRouterModule
+    FeatureRouterModule,
+    FormsModule
     
   ],
   providers: [PostService, UserService, ThemeService],
